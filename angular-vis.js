@@ -1,3 +1,4 @@
+var vis = require('vis');
 angular.module('ngVis', [])
 
     .factory('VisDataSet', function () {
