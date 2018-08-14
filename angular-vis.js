@@ -193,10 +193,11 @@ angular.module('ngVis', [])
                         return;
                     }
 
-                    // If we've actually changed the data set, then recreate the graph
-                    // We can always update the data by adding more data to the existing data set
+                    // update groups and items if graph exists
                     if (graph != null) {
-                        graph.destroy();
+                        graph.setItems(scope.data.items);
+                        graph.setGroups(scope.data.groups);
+                        return;
                     }
 
                     // Create the graph2d object
